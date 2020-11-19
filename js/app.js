@@ -48,8 +48,10 @@ class Countdown{
   
   if(timeDiff < 0 ){
    clearInterval(this.countdownInterval);
-   deadline.innerHTML = `<h2 class="greeting">Merry Christmas!!! <i class="fas fa-holly-berry"> </i></h2>`;
-   
+   deadline.innerHTML = ``;
+   const pageTitle = document.querySelector('#pageTitle');
+
+   pageTitle.innerHTML = `Birthday Poem for Kei`;
    document.querySelector('.deadline-meta').classList.add('meta--hide');
   }
  }

@@ -31,7 +31,7 @@ const yearToday = new Date().getFullYear();
 /* ALWAYS remember to start counting from 0 */
 
 /* Formatted in new Date(year, month, day, hours, minutes, seconds, milliseconds) */
-let futureDate = new Date(yearToday, 11, 25, 00, 00, 00);
+let futureDate = new Date(yearToday, 10, 12, 00, 00);
 
 
 /* Notes */

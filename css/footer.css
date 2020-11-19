@@ -1,5 +1,5 @@
 footer{
- width:80%;
+ width:max-content;
  margin:0 auto;
  display:-webkit-box;
  display:-ms-flexbox;
@@ -37,7 +37,7 @@ footer{
 }
 
 .social-media:hover{
-  color: #fff;
+  color: var(--red);
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
