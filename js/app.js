@@ -16,8 +16,13 @@ class Countdown{
   this.countdownInterval;
   this.btnCelebrate = btnCelebrate;
   this.btnStop = btnStop;
-   this.sound =  new Howl({
-      src: ['../audio/happy-bday.mp3']
+
+  this.sound =  new Howl({
+      src: ['../audio/happy-bday.mp3'],
+      onend: function () {
+         this.btnCelebrate.classList.remove('meta--hide');
+         this.btnStop.classList.add('meta--hide');
+      }
    });
 
   /* Values in ms */
@@ -99,6 +104,7 @@ class Countdown{
       this.btnCelebrate.classList.add('meta--hide');
       this.btnStop.classList.remove('meta--hide');
 
+
    });
  }
 
@@ -109,7 +115,6 @@ class Countdown{
       this.sound.stop();
       this.btnCelebrate.classList.remove('meta--hide');
       this.btnStop.classList.add('meta--hide');
-
    });
  }
 
