@@ -191,7 +191,7 @@ em{
     background:var(--red);
     color:var(--white);
     width:max-content;
-    margin:30px auto 10px auto;
+    margin:20px auto 10px auto;
 }
 
 .date-poem__stop:focus{
@@ -207,7 +207,7 @@ em{
 
 .cake{
   color:var(--red);
-  margin-top:20px;
+  margin-top:24px;
 }
 
 @media only screen and (max-width:800px){
