@@ -58,7 +58,7 @@ class Countdown{
    deadline.innerHTML = ``;
    const pageTitle = document.querySelector('#pageTitle');
 
-   pageTitle.innerHTML = `Birthday Poem for Kei`;
+   pageTitle.innerHTML = `Birthday Poem <br> for Kei`;
    document.querySelector('.deadline-meta').classList.add('meta--hide');
   }
  }
