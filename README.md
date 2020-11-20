@@ -1,4 +1,3 @@
-# **Christmas Countdown Timer**
+# **Kei's Birthday Countdown**
 
-I made a Christmas Countdown Timer that dynamically makes days before christmas in the current year.
-
+A birthday countdown for my friend Kei and special surprise when it hits the last second.

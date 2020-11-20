@@ -8,12 +8,17 @@
 
 
 class Countdown{
- constructor({futureTime}){
+ constructor({futureTime, btnCelebrate, btnStop}){
   /* Arguments */
   this.futureTime = futureTime;
   
   /* Defaults */
   this.countdownInterval;
+  this.btnCelebrate = btnCelebrate;
+  this.btnStop = btnStop;
+   this.sound =  new Howl({
+      src: ['../audio/happy-bday.mp3']
+   });
 
   /* Values in ms */
   /* Value of how many milliseconds in one day */
@@ -23,6 +28,8 @@ class Countdown{
   
   /* Auto Run */
   this.startCountdown();
+  this.playSong();
+  this.stopSong();
  }
 
  getRemainingTime(){
@@ -79,9 +86,33 @@ class Countdown{
   this.countdownInterval = setInterval(this.getRemainingTime.bind(this), 1000);
  }
 
+ playSong(){
+   this.btnCelebrate.addEventListener('click', (e)=> {
+     e.preventDefault();
+   
+      this.sound.play();
+      this.btnCelebrate.classList.add('meta--hide');
+      this.btnStop.classList.remove('meta--hide');
+
+   });
+ }
+
+ stopSong(){
+   this.btnStop.addEventListener('click', (e)=> {
+     e.preventDefault();
+
+      this.sound.stop();
+      this.btnCelebrate.classList.remove('meta--hide');
+      this.btnStop.classList.add('meta--hide');
+
+   });
+ }
+
 }
 
 const countdown = new Countdown({
- futureTime: futureDate.getTime()
+ futureTime: futureDate.getTime(),
+ btnCelebrate: document.querySelector('#btnCelebrate'),
+ btnStop: document.querySelector('#btnStop')
 });
 
