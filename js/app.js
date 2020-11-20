@@ -61,6 +61,10 @@ class Countdown{
    pageTitle.innerHTML = `Birthday Poem <br> for Kei`;
    document.querySelector('.deadline-meta').classList.add('meta--hide');
    document.querySelector('.date-poem').classList.remove('meta--hide');
+   document.querySelector('.cake').classList.remove('meta--hide');
+   document.querySelector('.announcement').classList.add('meta--hide');
+   
+
   }
  }
 

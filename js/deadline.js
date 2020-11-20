@@ -21,8 +21,6 @@ const weekday = weekdays[futureDate.getDay()];
 /* We used Native Date Time format from Javascript */
 const time = new Intl.DateTimeFormat('en-AU', options).format(futureDate);
 
-announcement.textContent = `A little surprise awaits when the timer hits the last second. `;
-
 
 /* Old Style */
 /* announcement.textContent = `Christmas Day is on ${weekday}, ${date}, ${month}, ${year} ${hours}:${minutes}`; */
